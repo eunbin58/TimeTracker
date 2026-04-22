@@ -40,12 +40,16 @@ out/
 .env
 .env.*
 !.env.example
+src/main/resources/application.yml
+src/main/resources/application.yaml
 src/main/resources/application-local.yml
 src/main/resources/application-local.yaml
 src/main/resources/application-dev.yml
 src/main/resources/application-dev.yaml
 src/main/resources/application-prod.yml
 src/main/resources/application-prod.yaml
+!src/main/resources/application.example.yml
+!src/main/resources/application.example.yaml
 
 ### Logs ###
 *.log
