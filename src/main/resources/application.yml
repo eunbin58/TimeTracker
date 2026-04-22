@@ -1,0 +1,17 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  application:
+    name: TimeTracker
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/timetracker}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: ${JPA_DDL_AUTO:update}
+    show-sql: ${JPA_SHOW_SQL:true}
+
+jwt:
+  secret: ${JWT_SECRET:change-this-jwt-secret}
