@@ -42,6 +42,11 @@
 | R-004 | 예외 클래스 세분화 | 에러 처리 가독성 향상 | medium | todo | |
 | R-005 | 공통 응답 포맷 정리 | 응답 일관성 확보 | medium | todo | |
 | R-006 | 테스트 코드 보강 | 회귀 방지 | high | todo | 핵심 API 우선 |
+| R-007 | Category soft delete 조회 조건 정리 | 삭제된 카테고리가 목록/통계에 포함되지 않도록 Repository 조회 조건 필요 | medium | todo | `findByUserIdAndDeletedFalse` 등 서비스 구현 시 반영 |
+| R-008 | TimeRecord duration 저장 방식 검토 | 통계 쿼리 단순화를 위해 `Duration` 대신 초 단위 숫자 저장 검토 | medium | todo | `durationSeconds` 후보, 통계 구현 전 결정 |
+| R-009 | Category boolean 필드명 정리 | `isDeleted` 필드명은 Lombok/JPA/JSON 매핑에서 혼동 가능 | low | todo | `deleted`로 변경 후보 |
+| R-010 | 엔티티 필수값 nullable 정책 보강 | 이름, 시작 시간 등 도메인 필수값을 DB 제약과 맞출 필요 | medium | todo | `Category.name`, `TimeRecord.startTime` 등 |
+| R-011 | 깨진 한글 주석 정리 | 학습 및 코드리뷰 시 주석과 코드 구분이 어려움 | low | todo | 기능 영향 없음, 시간 날 때 정리 |
 
 ---
 

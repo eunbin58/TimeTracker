@@ -9,7 +9,6 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import java.time.Duration;
 import java.time.LocalDateTime;
 
 @Entity
@@ -34,11 +33,12 @@ public class TimeRecord {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
+    @Column(nullable = false)
     private LocalDateTime startTime;
 
     private LocalDateTime endTime;
 
-    private Duration duration;
+    private Long durationSeconds;
 
     //enum: 정해진 값만 들어가도록 제한
     @Enumerated(EnumType.STRING)
