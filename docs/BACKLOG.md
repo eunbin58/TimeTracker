@@ -46,7 +46,9 @@
 | R-008 | TimeRecord duration 저장 방식 검토 | 통계 쿼리 단순화를 위해 `Duration` 대신 초 단위 숫자 저장 검토 | medium | todo | `durationSeconds` 후보, 통계 구현 전 결정 |
 | R-009 | Category boolean 필드명 정리 | `isDeleted` 필드명은 Lombok/JPA/JSON 매핑에서 혼동 가능 | low | todo | `deleted`로 변경 후보 |
 | R-010 | 엔티티 필수값 nullable 정책 보강 | 이름, 시작 시간 등 도메인 필수값을 DB 제약과 맞출 필요 | medium | todo | `Category.name`, `TimeRecord.startTime` 등 |
-| R-011 | 깨진 한글 주석 정리 | 학습 및 코드리뷰 시 주석과 코드 구분이 어려움 | low | todo | 기능 영향 없음, 시간 날 때 정리 |
+| R-011 | Repository 메서드 네이밍 기준 정리 | `findByUserId`, `findAllByUserId`, `findByUser_Id`처럼 같은 목적의 표현이 섞일 수 있어 기준 필요 | low | todo | MVP 구현 후 Repository 전반 정리 |
+| R-012 | TimeRecord 날짜 범위 조회 추가 검토 | 기록 조회/일별/주간 통계 구현 시 `startTime` 기준 기간 조회가 필요할 가능성 있음 | medium | todo | Service 구현 중 실제 필요할 때 추가 |
+| R-013 | Category 이름 중복 정책 검토 | 같은 사용자가 동일한 카테고리 이름을 여러 개 만들 수 있는지 정책 결정 필요 | medium | todo | 카테고리 CRUD 구현 안정화 후 결정 |
 
 ---
 
