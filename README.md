@@ -58,7 +58,7 @@
 ---
 
 ## 패키지 구조
-
+```
 com.project.timetracker
 ├── auth
 ├── user
@@ -69,17 +69,17 @@ com.project.timetracker
 ├── common
 ├── config
 └── security
-
+```
 ---
 
 ## 아키텍처 개요
-
+```
 Client
 ↓
 Spring Boot API Server
 ↓
 PostgreSQL
-
+```
 ---
 
 ## 계층 구조
