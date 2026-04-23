@@ -2,9 +2,9 @@ package com.project.timetracker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
-@EnableJpaAuditing
+//config.JpaAuditingconfig에 들어가있음
+//@EnableJpaAuditing
 @SpringBootApplication
 public class TimeTrackerApplication {
 
