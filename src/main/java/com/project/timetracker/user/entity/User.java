@@ -1,18 +1,12 @@
 package com.project.timetracker.user.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import java.time.LocalDateTime;
-
+import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import java.time.LocalDateTime;
 
 //이 클래스는 DB 테이블과 매핑된다는 의미
 //JPA가 이 객체를 보고 테이블을 자동으로 관리함
@@ -44,7 +38,7 @@ public class User {
     private String passwordHash;
 
     @Column(nullable = false)
-    private String nickname;
+    private String name;
 
     @CreatedDate
     @Column(nullable = false, updatable = false)
